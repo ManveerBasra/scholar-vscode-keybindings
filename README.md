@@ -10,3 +10,10 @@ Here's how to deploy it to the machine, we don't publish it on the marketplace.
 vsce package
 scp ./scholar-custom-keybindings-0.0.1.vsix root@{DROPLET_IP}:/root/custom-extensions/scholar-custom-keybindings-0.0.1.vsix
 ```
+
+On the machine, we just need to do:
+
+```
+mkdir -p custom-extensions
+./openvscode-server-v1.75.1-linux-x64/bin/openvscode-server --install-extension custom-extensions/scholar-custom-keybindings-0.0.1.vsix
+```
